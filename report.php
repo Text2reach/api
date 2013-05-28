@@ -20,7 +20,7 @@ try {
 
     $f = fopen('sms_reports.txt', 'a+');
     fwrite($f, "---".date('H:i:s d.m.Y')."---\n");
-    fwrite($f, "SMS status: ".$status->status."\n");
+    fwrite($f, "SMS status: ".$status->status."\n"); // View the full list of statuses in text2reach/sms.php
     fwrite($f, "Retries: ".$status->retries."\n\n");
     fclose($f);
 
