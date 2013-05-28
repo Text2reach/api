@@ -52,6 +52,7 @@ abstract class Text2reach_API {
 
         $c = curl_init($this->uri);
 		curl_setopt($c, CURLOPT_RETURNTRANSFER, true);
+		curl_setopt($c, CURLOPT_USERAGENT, 'Text2reach API wrapper');
 		$this->response = curl_exec($c);
 
         if ($this->response === false) {
